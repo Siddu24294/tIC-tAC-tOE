@@ -1,13 +1,11 @@
-import pygame as py
+import pygame as pyg
 import pygame.mouse
 from pygame.locals import *
-from Player import player,playerO,playerX,g
-from Game import Game
+#from Player import player
+from Game import g
 
-py.init()
-player_list=[playerX('X',"green"),playerO('O',"red")]
-g.players=player_list
-print(Game.players)
-screenStates=[g.nextState,g.gameMainLoop]
+pyg.init()
+#player_list=[playerX('X',"green"),playerO('O',"red")]
+screenStates=[g.nextState,g.optimisedCode]
 while True:
 	screenStates[g.screenState]()
